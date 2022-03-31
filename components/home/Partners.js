@@ -18,7 +18,7 @@ const Partners = () => {
     <Fragment>
       <div className="container-fluid px-0 pt-5 mt-5 d-lg-block d-none overflow-hidden">
         <div className="row">
-          <h3 className="bold-font text-center pb-4">
+          <h3 className="bold-font text-center pb-4 text-uppercase">
             {ctx.generalData.home_settings["partners_section_title"]}
           </h3>
         </div>

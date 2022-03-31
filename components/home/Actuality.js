@@ -17,7 +17,7 @@ const Actuality = () => {
     <Fragment>
       <div className="container pt-5 mt-5 pb-3">
         <div className="row text-center">
-          <h3 className="bold-font">
+          <h3 className="bold-font text-uppercase">
             {ctx.generalData.home_settings["news_section_title"]}
           </h3>
         </div>

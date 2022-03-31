@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect, Fragment } from "react";
+import { useContext, Fragment } from "react";
 import GeneralContext from "../../pages/general-context";
 
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
@@ -11,26 +11,6 @@ import "swiper/css/effect-fade";
 
 const Network = () => {
   const ctx = useContext(GeneralContext);
-
-  let windowSize = null;
-
-  if (typeof window !== "undefined") {
-    windowSize = window.innerWidth;
-  }
-
-  const [screenWidth, setScreenWidth] = useState();
-
-  useEffect(() => {
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", changeWidth);
-
-    return () => {
-      window.removeEventListener("resize", changeWidth);
-    };
-  }, []);
 
   const regularContent = (
     <Fragment>
