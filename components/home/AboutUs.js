@@ -10,7 +10,7 @@ const AboutUs = () => {
   const flexContent = (
     <div className="container-fluid pt-5 mt-5 px-0">
       <div className="d-flex flex-lg-row flex-column align-items-lg-center">
-        <div className="ratio ratio-2x3-home">
+        <div className="ratio ratio-home-about1">
           <img
             src={ctx.generalData.about_settings["about_malishi_image1"]}
             alt=""
@@ -33,7 +33,7 @@ const AboutUs = () => {
           </div>
         </div>
         
-          <div className="ratio ratio-1x1-home align-self-lg-center align-self-end">
+          <div className="ratio ratio-home-about2 align-self-lg-center align-self-end">
             <img
               src={ctx.generalData.about_settings["about_malishi_image2"]}
               alt=""

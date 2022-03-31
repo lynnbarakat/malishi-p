@@ -2,7 +2,6 @@ import { Fragment, useContext } from "react";
 import GeneralContext from "../../pages/general-context";
 import Link from "next/dist/client/link";
 import Image from "next/dist/client/image";
-import trial from "../../Asssets/trial.png";
 
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";

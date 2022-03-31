@@ -17,11 +17,11 @@ const Header = () => {
       <div className="position-absolute top-0 start-0 w-100 header-background"></div>
       <div className="container">
         <div className="row">
-          <h1 className="pt-5 mt-5 pb-4">
+          <h1 className="pt-5 mt-5 pb-4 bold-font">
             {ctx.generalData?.home_settings["malishi_title"]}
           </h1>
           <div className="col-lg-6">
-            <p>{ctx.generalData?.home_settings["malishi_description"]}</p>
+            <p className="regular-font">{ctx.generalData?.home_settings["malishi_description"]}</p>
           </div>
         </div>
         <div className="row">
@@ -32,7 +32,7 @@ const Header = () => {
               pagination={{ clickable: true, el: ".custom-pagination-right" }}
             >
               <SwiperSlide>
-                <div className="ratio ratio-2x1 cover">
+                <div className="ratio ratio-home-header">
                   <img
                     src={ctx.generalData.home_header_list[0].full_path_image}
                     alt="logo"
@@ -44,7 +44,7 @@ const Header = () => {
                 </p>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="ratio ratio-2x1">
+                <div className="ratio ratio-home-header">
                   <img
                     src={ctx.generalData.home_header_list[1].full_path_image}
                     alt="logo"
@@ -56,7 +56,7 @@ const Header = () => {
                 </p>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="ratio ratio-2x1">
+                <div className="ratio ratio-home-header">
                   <img
                     src={ctx.generalData.home_header_list[0].full_path_image}
                     alt="logo"
@@ -68,7 +68,7 @@ const Header = () => {
                 </p>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="ratio ratio-2x1">
+                <div className="ratio ratio-home-header">
                   <img
                     src={ctx.generalData.home_header_list[1].full_path_image}
                     alt="logo"

@@ -11,92 +11,98 @@ const Nav = () => {
 
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  let windowSize = null;
-
-  if (typeof window !== "undefined") {
-    windowSize = window.innerWidth;
-  }
-
-  const [screenWidth, setScreenWidth] = useState(windowSize);
-
-  
-
-  useEffect(() => {
-
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth);
-    }
-
-    window.addEventListener('resize', changeWidth);
-
-    return () => {
-        window.removeEventListener('resize', changeWidth);
-    }
-
-  }, [])
-
   const toggleHandler = () => {
     setToggleMenu(!toggleMenu);
   };
 
-  const menuContent = <div className="col-lg-9 bold-font nav-items my-auto">
-  <ul className="d-flex flex-lg-row flex-column justify-content-lg-between align-items-center">
-    <li className="mt-lg-0 mt-5 mb-lg-0 mb-5">
-      <Link href="/about-us">
-        {ctx.generalData.menu_items["about-us"]}
-      </Link>
-    </li>
-    <li className="mb-lg-0 mb-5">
-      <Link href="/products">
-        {ctx.generalData.menu_items["products"]}
-      </Link>
-    </li>
-    <li className="mb-lg-0 mb-5">
-      <Link href="/our-engagements">
-        {ctx.generalData.menu_items["our-engagements"]}
-      </Link>
-    </li>
-    <li className="mb-lg-0 mb-5">
-      <Link href="/our-improvisions">
-        {ctx.generalData.menu_items["our-improvisions"]}
-      </Link>
-    </li>
-    <li className="mb-lg-0 mb-5">
-      <Link href="/our-sectors">
-        {ctx.generalData.menu_items["our-sectors"]}
-      </Link>
-    </li>
-    <li className="mb-lg-0 mb-5">
-      <Link href="/news">{ctx.generalData.menu_items["news"]}</Link>
-    </li>
-    <li className="mb-lg-0 mb-5">
-      <Link href="/contact">
-        {ctx.generalData.menu_items["contact"]}
-      </Link>
-    </li>
-  </ul>
-</div>
+  const mobileContent = (
+    <div className="bold-font nav-items my-auto d-lg-none">
+      <ul className="d-flex flex-column align-items-center">
+        <li className="mt-5 0 mb-5">
+          <Link href="/about-us">{ctx.generalData.menu_items["about-us"]}</Link>
+        </li>
+        <li className="mb-5">
+          <Link href="/products">{ctx.generalData.menu_items["products"]}</Link>
+        </li>
+        <li className="mb-5">
+          <Link href="/our-engagements">
+            {ctx.generalData.menu_items["our-engagements"]}
+          </Link>
+        </li>
+        <li className="mb-5">
+          <Link href="/our-improvisions">
+            {ctx.generalData.menu_items["our-improvisions"]}
+          </Link>
+        </li>
+        <li className="mb-5">
+          <Link href="/our-sectors">
+            {ctx.generalData.menu_items["our-sectors"]}
+          </Link>
+        </li>
+        <li className="mb-5">
+          <Link href="/news">{ctx.generalData.menu_items["news"]}</Link>
+        </li>
+        <li className="mb-5">
+          <Link href="/contact">{ctx.generalData.menu_items["contact"]}</Link>
+        </li>
+      </ul>
+    </div>
+  );
+
+  const desktopContent = (
+    <div className="col-xl-9 col-lg-10 bold-font nav-items my-auto d-none d-lg-block">
+      <ul className="d-flex flex-lg-row flex-column justify-content-lg-between align-items-center">
+        <li className="mt-lg-0 mt-5 mb-lg-0 mb-5">
+          <Link href="/about-us">{ctx.generalData.menu_items["about-us"]}</Link>
+        </li>
+        <li className="mb-lg-0 mb-5">
+          <Link href="/products">{ctx.generalData.menu_items["products"]}</Link>
+        </li>
+        <li className="mb-lg-0 mb-5">
+          <Link href="/our-engagements">
+            {ctx.generalData.menu_items["our-engagements"]}
+          </Link>
+        </li>
+        <li className="mb-lg-0 mb-5">
+          <Link href="/our-improvisions">
+            {ctx.generalData.menu_items["our-improvisions"]}
+          </Link>
+        </li>
+        <li className="mb-lg-0 mb-5">
+          <Link href="/our-sectors">
+            {ctx.generalData.menu_items["our-sectors"]}
+          </Link>
+        </li>
+        <li className="mb-lg-0 mb-5">
+          <Link href="/news">{ctx.generalData.menu_items["news"]}</Link>
+        </li>
+        <li className="mb-lg-0 mb-5">
+          <Link href="/contact">{ctx.generalData.menu_items["contact"]}</Link>
+        </li>
+      </ul>
+    </div>
+  );
 
   return (
     <nav className="position-fixed w-100 navigation-bar">
       <div className="container">
         <div className="row py-3">
-          <div className="col-lg-3 position-relative">
+          <div className="col-xl-3 col-lg-2 position-relative">
             <Link href="/">
               <a>
                 <Image src={logo} alt="logo" />
               </a>
             </Link>
             <button
-              className="position-absolute top-50 end-0 translate-middle-y menu-button"
+              className="position-absolute top-50 end-0 translate-middle-y menu-button pe-2 me-1 d-lg-none"
               onClick={toggleHandler}
             >
-              {!toggleMenu && (screenWidth < 992) && <Image src={menuButton} alt="menu button" />}
-              {toggleMenu && (screenWidth < 992) && <Image src={closeMenu} alt="menu close button" />}
+              {!toggleMenu && <Image src={menuButton} alt="menu button" />}
+              {toggleMenu && <Image src={closeMenu} alt="menu close button" />}
             </button>
           </div>
-          {toggleMenu && (screenWidth < 992) && menuContent}
-          {(screenWidth >= 992) && menuContent}
+          {toggleMenu && mobileContent}
+          {desktopContent}
         </div>
       </div>
     </nav>
