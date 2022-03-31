@@ -5,6 +5,7 @@ import Link from "next/dist/client/link";
 
 const AboutUs = () => {
   const ctx = useContext(GeneralContext);
+  
 
   const flexContent = (
     <div className="container-fluid pt-5 mt-5 px-0">

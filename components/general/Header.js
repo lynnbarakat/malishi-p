@@ -1,5 +1,4 @@
 import Nav from "./Nav";
-import Image from "Next/image";
 import { useContext } from "react";
 import GeneralContext from "../../pages/general-context";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
