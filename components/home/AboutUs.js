@@ -46,10 +46,10 @@ const AboutUs = () => {
   );
   return (
     <Fragment>
-      {/* <div className="container-fluid mt-5 pt-5">
+      <div className="container-fluid mt-5 pt-5">
       <div className="row d-flex align-items-center">
         <div className="col-lg-3 ps-0">
-          <div className="ratio ratio-2x3-home">
+          <div className="ratio ratio-home-about1">
             <img
               src={ctx.generalData.about_settings["about_malishi_image1"]}
               alt=""
@@ -63,7 +63,7 @@ const AboutUs = () => {
               {ctx.generalData.about_settings["about_malishi_title"]}
             </h3>
           </div>
-          <p className="regular-font text-center">
+          <p className="regular-font text-start">
             {ctx.generalData.about_settings["about_malishi_smalltext"]}
           </p>
           <div className="d-flex justify-content-lg-end justify-content-center align-items-center py-3">
@@ -73,7 +73,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="col-lg-3 pe-0 d-flex justify-content-end">
-          <div className="ratio ratio-1x1-home">
+          <div className="ratio ratio-home-about2">
             <img
               src={ctx.generalData.about_settings["about_malishi_image2"]}
               alt=""
@@ -82,8 +82,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div> */}
-      {flexContent}
+    </div>
     </Fragment>
   );
 };

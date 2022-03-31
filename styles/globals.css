@@ -334,13 +334,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     border-right: 23px solid #969353;
   }
 
-  .ratio-2x3-home {
+  .ratio-home-about1 {
     aspect-ratio: 1/1;
     width: 70%;
     object-fit: cover;
   }
 
-  .ratio-1x1-home {
+  .ratio-home-about2 {
     aspect-ratio: 1.16;
     width: 70%;
     object-fit: cover;
