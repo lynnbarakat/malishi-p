@@ -52,19 +52,35 @@ const Actuality = () => {
         <div className="row">
           <div className="swiper-container">
             <Swiper
+              className="h-100"
               modules={[Navigation, Pagination]}
               pagination={{
                 clickable: true,
                 el: ".custom-pagination-home-actuality",
               }}
+              centeredSlides={true}
+              loop={true}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  spaceBetween: 25,
+                },
+                576: {
+                  slidesPerView: 2,
+                  spaceBetween: 25,
+                },
+               
+              }}
             >
               {ctx.generalData.news_list.map((link) => (
-                <SwiperSlide key={link.id}>
-                  <div className="bg-home-actuality-mobile p-3 position-relative">
-                    <p className="regular-font small-text">{link.date}</p>
-                    <p className="bold-font">{link.title}</p>
-                    <p className="regular-font">{link.small_text}</p>
-                    <div className="d-flex justify-content-start align-items-center py-3">
+                <SwiperSlide className="h-100" key={link.id}>
+                  <div className="d-flex flex-column h-100 bg-home-actuality-mobile py-4 px-3 mx-sm-0 mx-3 position-relative">
+                    <div className="flex-grow-1">
+                      <p className="regular-font small-text mb-2">{link.date}</p>
+                      <p className="bold-font">{link.title}</p>
+                      <p className="regular-font">{link.small_text}</p>
+                    </div>
+                    <div className="d-flex justify-content-start align-items-center">
                       <Link href="/">
                         <button className="std-button">Lire La Suite</button>
                       </Link>

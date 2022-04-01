@@ -66,7 +66,7 @@ const AboutUs = () => {
           <p className="regular-font text-start">
             {ctx.generalData.about_settings["about_malishi_smalltext"]}
           </p>
-          <div className="d-flex justify-content-lg-end justify-content-center align-items-center py-3">
+          <div className="d-flex justify-content-lg-end justify-content-center align-items-center pt-lg-3">
             <Link href="/about-us">
               <button className="std-button">Lire La Suite</button>
             </Link>

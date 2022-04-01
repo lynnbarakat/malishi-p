@@ -34,7 +34,7 @@ const Network = () => {
         </div>
       </div>
       <div className="col">
-        <div className="text-center px-2 mb-2">
+        <div className="text-center px-2 mb-3">
           <h3 className="bold-font text-green mb-3">
             {ctx.generalData.home_network_list[1].title}
           </h3>
@@ -61,7 +61,7 @@ const Network = () => {
         </div>
       </div>
       <div className="col">
-        <div className="text-center px-2 mb-2">
+        <div className="text-center px-2 mb-3">
           <h3 className="bold-font text-green mt-5 pt-5 mb-3">
             {ctx.generalData.home_network_list[2].title}
           </h3>
@@ -88,7 +88,7 @@ const Network = () => {
         </div>
       </div>
       <div className="col">
-        <div className="text-center px-2 mb-2">
+        <div className="text-center px-2 mb-3">
           <h3 className="bold-font text-green mb-3">
             {ctx.generalData.home_network_list[3].title}
           </h3>
@@ -141,18 +141,21 @@ const Network = () => {
       <Swiper
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true, el: ".custom-pagination-home-network" }}
+        slidesPerView={1}
+        navigation={true}
+        centeredSlides={true}
       >
         <SwiperSlide>
           <div className="text-center">
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="bold-font text-green">
                 {ctx.generalData.home_network_list[1].title}
               </h3>
-              <p className="mb-0">
+              <p className="mb-0 two-lines">
                 {ctx.generalData.home_network_list[1].description}
               </p>
             </div>
-            <div className="border-home-network mx-3">
+            <div className="border-home-network">
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -173,15 +176,15 @@ const Network = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-center">
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="bold-font text-green">
                 {ctx.generalData.home_network_list[2].title}
               </h3>
-              <p className="mb-0">
+              <p className="mb-0 two-lines">
                 {ctx.generalData.home_network_list[2].description}
               </p>
             </div>
-            <div className="border-home-network mx-3">
+            <div className="border-home-network">
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -202,15 +205,15 @@ const Network = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-center">
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="bold-font text-green">
                 {ctx.generalData.home_network_list[3].title}
               </h3>
-              <p className="mb-0">
+              <p className="mb-0 two-lines">
                 {ctx.generalData.home_network_list[3].description}
               </p>
             </div>
-            <div className="border-home-network mx-3">
+            <div className="border-home-network">
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}

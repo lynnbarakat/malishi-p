@@ -39,7 +39,7 @@ const Header = () => {
                     className="cover"
                   />
                 </div>
-                <p className="pt-3 regular-font text-green">
+                <p className="pt-3 description-text regular-font text-green">
                   {ctx.generalData.home_header_list[0].description}
                 </p>
               </SwiperSlide>
@@ -51,7 +51,7 @@ const Header = () => {
                     className="cover"
                   />
                 </div>
-                <p className="pt-3 regular-font text-green">
+                <p className="pt-3 description-text regular-font text-green">
                   {ctx.generalData.home_header_list[1].description}
                 </p>
               </SwiperSlide>
@@ -63,7 +63,7 @@ const Header = () => {
                     className="cover"
                   />
                 </div>
-                <p className="pt-3 regular-font text-green">
+                <p className="pt-3 description-text regular-font text-green">
                   {ctx.generalData.home_header_list[0].description}
                 </p>
               </SwiperSlide>
@@ -75,7 +75,7 @@ const Header = () => {
                     className="cover"
                   />
                 </div>
-                <p className="pt-3 regular-font text-green">
+                <p className="pt-3 description-text regular-font text-green">
                   {ctx.generalData.home_header_list[1].description}
                 </p>
               </SwiperSlide>

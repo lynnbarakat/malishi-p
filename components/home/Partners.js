@@ -60,7 +60,7 @@ const Partners = () => {
           </Swiper>
         </div>
       </div>
-      <div className="container d-lg-none pt-5">
+      <div className="container d-lg-none pt-5 mt-5">
         <div className="row">
           <h3 className="bold-font text-center pb-3">
             {ctx.generalData.home_settings["partners_section_title"]}
@@ -68,10 +68,12 @@ const Partners = () => {
         </div>
         <div className="row">
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             slidesPerView={1}
             navigation={true}
             centeredSlides={true}
+
           >
             {ctx.generalData.partners_list.map((link, index) => (
               <SwiperSlide key={index}>
