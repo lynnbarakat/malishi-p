@@ -11,6 +11,7 @@ import "swiper/css/thumbs";
 
 const Supply = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiperM, setThumbsSwiperM] = useState(null);
 
   return (
     <Fragment>
@@ -195,7 +196,7 @@ const Supply = () => {
             </Swiper>
             <div>
               <Swiper
-                onSwiper={setThumbsSwiper}
+                onSwiper={setThumbsSwiperM}
                 spaceBetween={15}
                 slidesPerView={4}
                 freeMode={true}

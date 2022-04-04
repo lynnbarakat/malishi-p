@@ -66,6 +66,11 @@ h3 {
   font-family: GlacialBold, Arial, Helvetica;
 }
 
+.smaller-text {
+  font-size: 16px;
+  line-height: 21px;
+}
+
 .small-text {
   font-size: 14px;
   line-height: 19px;
@@ -77,6 +82,14 @@ h3 {
 
 .contain {
   object-fit: contain;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.w-90 {
+  width: 90%;
 }
 
 .header-background {
@@ -124,18 +137,6 @@ h3 {
   z-index: 999;
   transition: all 5s;
 }
-
-/* @keyframes fade_in_show {
-  0% {
-       opacity: 0;
-       transform: scale(0)
-  }
-
-  100% {
-       opacity: 1;
-       transform: scale(1)
-  }
-} */
 
 .show {
   opacity: 1 !important;
@@ -405,6 +406,29 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .pagination-about-supply-bottom {
   width: 100%;
+}
+
+.about-process-text p {
+  font-size: 16px;
+  line-height: 21px;
+  font-family: GlacialBold, Arial, Helvetica;
+}
+
+.about-dots1 {
+  left: 155px;
+}
+
+.bg-about-quality {
+  background-color: #969353;
+}
+
+.bg-about-quality p, .bg-about-quality h3 {
+  color: white;
+}
+
+.bullet-about-quality {
+  width: 80px;
+  height: auto;
 }
 
 @media (max-width: 991.9px) {

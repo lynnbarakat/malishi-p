@@ -14,6 +14,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Section2 from "../../components/about-us/Section2";
 import Supply from "../../components/about-us/Supply";
+import FabricationProcess from "../../components/about-us/FabricationProcess";
+import Quality from "../../components/about-us/Quality";
 
 const HomePage = () => {
   const ctx = useContext(GeneralContext);
@@ -84,6 +86,8 @@ const HomePage = () => {
       />
       <Section2 />
       <Supply />
+      <FabricationProcess />
+      <Quality />
       <Footer />
     </Fragment>
   );
