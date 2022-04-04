@@ -1,9 +1,4 @@
-import Footer from "../components/general/Footer";
 import Layout from "../components/general/Layout";
-import axios from "axios";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import react from "react";
 import GeneralContext from "./general-context";
 import { useContext } from "react";
 import Impact from "../components/home/Impact";
@@ -16,9 +11,17 @@ function Home() {
   const ctx = useContext(GeneralContext);
   console.log(ctx);
   return (
-    <Layout>
+    <Layout
+      title={ctx.generalData.home_settings["malishi_title"]}
+      text={ctx.generalData.home_settings["malishi_description"]}
+      image={ctx.generalData.home_header_list}
+    >
       <Impact />
-      <AboutUs />
+      <AboutUs
+        title={ctx.generalData.about_settings["about_malishi_title"]}
+        text={ctx.generalData.about_settings["about_malishi_smalltext"]}
+        button={true}
+      />
       <Network />
       <Partners />
       <Actuality />

@@ -375,6 +375,38 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   -webkit-box-orient: vertical;
 }
 
+/* ABOUT US */
+
+.bg-about-supply {
+  background-color: #f4f4ed;
+  height: 72%;
+  z-index: -1;
+}
+
+/* .thumbs-about-supply {
+  height: 100px;
+} */
+
+.thumbs-about-supply .swiper-slide {
+  opacity: 0.7;
+  border-right: 8px solid #969353;
+}
+
+.thumbs-about-supply .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.custom-pagination-about-supply {
+  position: absolute;
+  top: 55.5%;
+  right: 0;
+  transform: translateX(52%) rotate(90deg);
+}
+
+.pagination-about-supply-bottom {
+  width: 100%;
+}
+
 @media (max-width: 991.9px) {
   .vertical-txt-home {
     position: static;

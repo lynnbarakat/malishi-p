@@ -2,14 +2,14 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const header = ({ children }) => {
+const Layout = (props) => {
   return (
     <div>
-      <Header />
-      {children}
+      <Header title={props.title} text={props.text} image={props.image} />
+      {props.children}
       <Footer />
     </div>
   );
 };
 
-export default header;
+export default Layout;
